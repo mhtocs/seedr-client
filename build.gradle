@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+}
+
+group 'com.mhtocs.seedr.client'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'org.json:json:20210307'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'io.github.cdimascio:dotenv-kotlin:6.2.2'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+}
